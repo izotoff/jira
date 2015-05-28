@@ -34,6 +34,7 @@ ENV JIRA_HOME /var/atlassian/jira
 VOLUME /var/atlassian/jira
 
 COPY ./docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
